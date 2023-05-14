@@ -2,7 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     return {
       store: {
         characters: [],
-        planets: [],
+        planets: []
       },
       actions: {
         // Use getActions to call a function within a fuction
@@ -29,26 +29,38 @@ const getState = ({ getStore, getActions, setStore }) => {
         //   setStore({ demo: demo });
         // },
 
-        loadCharacters: async () => {
-          try {
-            let responsePeople = await fetch("https://www.swapi.tech/api/people")
-            let dataPeople = await responsePeople.json()
-            console.log(dataPeople)
-            dataPeople.results.map((item, index) => (
-              // console.log(index),
-              fetch(`https://www.swapi.tech/api/people/${index + 1}`)
-              .then(response => response.json())
-              .then(data => {
-                console.log(data)
-                setStore({characters: data.result.properties})
-              })
-              .catch(err => console.error(err))
-            ))
+        
+
+        // loadCharacters: async () => {
+        //   try {
+        //     let responsePeople = await fetch("https://www.swapi.tech/api/people")
+        //     let dataPeople = await responsePeople.json()
+        //     // console.log(dataPeople)
+  
+        //     // dataPeople.results.map((item, index) => (
+        //     //   // console.log(index),
+        //     //   fetch(`https://www.swapi.tech/api/people/${index + 1}`)
+        //     //   .then(response => response.json())
+        //     //   .then(data => {
+        //     //     console.log(data)
+        //     //     // console.log(item)
+        //     //     setStore({ characters: data.result.properties })
+
+        //     //   })
+        //     //   .catch(err => console.error(err))
+        //     // ))
             
-          } catch (error) {
-            console.log(error)
-          }
-        },
+        //   } catch (error) {
+        //     console.log(error)
+        //   }
+          
+          
+        // },
+
+        // printCharacters: () =>{
+        //   const store = getStore()
+        //   console.log(store.characters)
+        // }
       },
     };
 };
