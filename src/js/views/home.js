@@ -3,11 +3,13 @@ import "../../styles/home.css";
 import { CharacterCard } from "../component/characterCard.js";
 import { Context } from "../store/appContext.js"
 import { PlanetCard } from "../component/planetCard.js";
+import { VehicleCard } from "../component/vehicleCard.js";
 
 export const Home = () => {
   const {store, actions} = useContext(Context)
   const [characters, setCharacters] = useState([])
   const [planets, setPlanets] = useState([])
+  const [vehicles, setVehicles] = useState([])
 
   useEffect(() => {
     // actions.loadCharacters();
@@ -35,6 +37,18 @@ export const Home = () => {
 			}
 		}
 		loadPlanets();
+
+    async function loadVehicles(){
+			try{
+				const resp = await fetch(`https://www.swapi.tech/api/vehicles`)
+				const data = await resp.json()
+        console.log(data.results)
+				setVehicles(data.results)
+			}catch(err){
+				console.log(err)
+			}
+		}
+		loadVehicles();
 
 
   }, []);
@@ -70,6 +84,23 @@ export const Home = () => {
                   name={planet.name}
                   key={planet.uid}
                   url={planet.url}
+                />
+              </div>
+
+            ))  
+
+          }  
+        </div>
+        <h2>Vehicles</h2>
+        <div className="d-flex flex-wrap">
+
+          {vehicles.map((vehicle) => (
+              <div key={vehicle.uid} className="m-2">
+                <VehicleCard
+                  item={vehicle}
+                  name={vehicle.name}
+                  key={vehicle.uid}
+                  url={vehicle.url}
                 />
               </div>
 

@@ -19,7 +19,7 @@ export const CharacterCard = (props) => {
 
   return (
       <div className="card" style={{ width: "18rem" }}>
-        <img src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2020/09/hipertextual-tengo-mal-presentimiento-sobre-esto-todas-veces-que-han-dicho-star-wars-2020046719.jpg?resize=1500%2C1000&quality=50&strip=all&ssl=1" className="card-img-top" alt="..." />
+        <img src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2020/09/hipertextual-tengo-mal-presentimiento-sobre-esto-todas-veces-que-han-dicho-star-wars-2020046719.jpg?resize=1500%2C1000&quality=50&strip=all&ssl=1" className="card-img-top" alt="..." style={{ maxHeight: '200px', objectFit: 'cover' }} />
         <div className="card-body d-flex flex-column align-items-start">
           <h5 className="card-title">{props.name}</h5>
           <p className="card-text text-start">
