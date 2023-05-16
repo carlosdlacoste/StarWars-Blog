@@ -8,7 +8,7 @@ export const VehicleCard = (props) => {
 			try{
 				const resp = await fetch(`${props.url}`)
 				const data = await resp.json()
-                console.log(data.result.properties)
+                // console.log(data.result.properties)
 				setVehicle(data.result.properties)
 			}catch(err){
 				console.log(err)

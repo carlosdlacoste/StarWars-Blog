@@ -8,7 +8,7 @@ export const PlanetCard = (props) => {
 			try{
 				const resp = await fetch(`${props.url}`)
 				const data = await resp.json()
-                console.log(data.result.properties)
+                // console.log(data.result.properties)
 				setPlanet(data.result.properties)
 			}catch(err){
 				console.log(err)

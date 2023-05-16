@@ -18,7 +18,7 @@ export const Home = () => {
 			try{
 				const resp = await fetch(`https://www.swapi.tech/api/people`)
 				const data = await resp.json()
-        console.log(data.results)
+        // console.log(data.results)
 				setCharacters(data.results)
 			}catch(err){
 				console.log(err)
@@ -30,7 +30,7 @@ export const Home = () => {
 			try{
 				const resp = await fetch(`https://www.swapi.tech/api/planets`)
 				const data = await resp.json()
-        console.log(data.results)
+        // console.log(data.results)
 				setPlanets(data.results)
 			}catch(err){
 				console.log(err)
@@ -42,7 +42,7 @@ export const Home = () => {
 			try{
 				const resp = await fetch(`https://www.swapi.tech/api/vehicles`)
 				const data = await resp.json()
-        console.log(data.results)
+        // console.log(data.results)
 				setVehicles(data.results)
 			}catch(err){
 				console.log(err)
@@ -65,7 +65,7 @@ export const Home = () => {
                 <CharacterCard
                   item={character}
                   name={character.name}
-                  key={character.uid}
+                  id={character.uid}
                   url={character.url}
                 />
               </div>
@@ -82,7 +82,7 @@ export const Home = () => {
                 <PlanetCard
                   item={planet}
                   name={planet.name}
-                  key={planet.uid}
+                  id={planet.uid}
                   url={planet.url}
                 />
               </div>
@@ -99,7 +99,7 @@ export const Home = () => {
                 <VehicleCard
                   item={vehicle}
                   name={vehicle.name}
-                  key={vehicle.uid}
+                  id={vehicle.uid}
                   url={vehicle.url}
                 />
               </div>
