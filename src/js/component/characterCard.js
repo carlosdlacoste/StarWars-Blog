@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import {Link, useNavigate} from "react-router-dom";
 import PropTypes from "prop-types";
 
 
 export const CharacterCard = (props) => {
   const [character, setCharacter] = useState([]);
+  const navigate = useNavigate();
+
   useEffect(() => {
     async function loadCharacter(){
 			try{
@@ -35,7 +38,7 @@ export const CharacterCard = (props) => {
               Eye-Color:{" "}{character.eye_color}
             </p>
             <div className="d-flex flex-row justify-content-between" style={{ width: "100%" }}>
-              <button className="btn btn-primary">Learn More!</button>
+              <button className="btn btn-primary" onClick={() => navigate(`/character/${props.id}`)}>Learn More!</button>
               <button type="button" className="btn btn-outline-warning">
                 <i className="fa-regular fa-heart"></i>
               </button>

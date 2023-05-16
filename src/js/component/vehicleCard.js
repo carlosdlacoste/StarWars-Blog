@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export const VehicleCard = (props) => {
     const [vehicle, setVehicle] = useState([]);
+    const navigate = useNavigate();
+
     useEffect(() => {
     async function loadVehicle(){
 			try{
@@ -32,7 +35,7 @@ export const VehicleCard = (props) => {
                 Passengers:{" "}{vehicle.passengers}
             </p>
             <div className="d-flex flex-row justify-content-between" style={{ width: "100%" }}>
-                <button className="btn btn-primary">Learn More!</button>
+                <button className="btn btn-primary" onClick={() => navigate(`/vehicle/${props.id}`)}>Learn More!</button>
                 <button type="button" className="btn btn-outline-warning">
                 <i className="fa-regular fa-heart"></i>
                 </button>
@@ -45,6 +48,7 @@ export const VehicleCard = (props) => {
 VehicleCard.propTypes = {
     item: PropTypes.object,
     name: PropTypes.string,
+    id: PropTypes.string,
     url: PropTypes.string
 
 };
