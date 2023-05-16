@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { CharacterDetail } from "../views/characterDetail";
+
 
 export const CharacterCard = (props) => {
   const [character, setCharacter] = useState([]);
