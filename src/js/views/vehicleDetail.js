@@ -35,7 +35,7 @@ export const VehicleDetail = (props) => {
             <div className="container">
                 <div className="row mb-3">
                     <div className="col-6">
-                        <img src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2020/09/hipertextual-tengo-mal-presentimiento-sobre-esto-todas-veces-que-han-dicho-star-wars-2020046719.jpg?resize=1500%2C1000&quality=50&strip=all&ssl=1" className="card-img-top" alt="..." style={{ objectFit: 'cover' }} />
+                        <img src="https://lumiere-a.akamaihd.net/v1/images/5ff895e40d603e0001462c74-image_ac3b4d2b.jpeg?region=0,0,1536,864&width=1200" className="card-img-top" alt="..." style={{ objectFit: 'cover' }} />
                     </div>
                     <div className="col-6">
                         <h3>{vehicle.name}</h3>

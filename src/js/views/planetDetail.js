@@ -35,7 +35,7 @@ export const PlanetDetail = (props) => {
             <div className="container">
                 <div className="row mb-3">
                     <div className="col-6">
-                        <img src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2020/09/hipertextual-tengo-mal-presentimiento-sobre-esto-todas-veces-que-han-dicho-star-wars-2020046719.jpg?resize=1500%2C1000&quality=50&strip=all&ssl=1" className="card-img-top" alt="..." style={{ objectFit: 'cover' }} />
+                        <img src="https://scontent-bog1-1.xx.fbcdn.net/v/t1.6435-9/106589845_1443201212533239_5253541363214813502_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=973b4a&_nc_ohc=qEbU86zvaAAAX_u3hbe&_nc_ht=scontent-bog1-1.xx&oh=00_AfDvX7pLnu8BsJ4Ld3Y8A4SPqBpwE_hmsXc8bBHbjyaWFg&oe=6488C44E" className="card-img-top" alt="..." style={{ objectFit: 'cover' }} />
                     </div>
                     <div className="col-6">
                         <h3>{planet.name}</h3>
