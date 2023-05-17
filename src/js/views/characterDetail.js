@@ -38,8 +38,8 @@ export const CharacterDetail = (props) => {
                         <img src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2020/09/hipertextual-tengo-mal-presentimiento-sobre-esto-todas-veces-que-han-dicho-star-wars-2020046719.jpg?resize=1500%2C1000&quality=50&strip=all&ssl=1" className="card-img-top" alt="..." style={{ objectFit: 'cover' }} />
                     </div>
                     <div className="col-6">
-                        <h3>{character.name}</h3>
-                        <p>{description.description}</p>
+                        <h3 className="text-warning">{character.name}</h3>
+                        <p className="text-warning">{description.description}</p>
 
                     </div>
                 </div>

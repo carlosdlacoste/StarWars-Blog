@@ -6,7 +6,7 @@ export const Navbar = () => {
 
   const {store, actions} = useContext(Context)
     return (
-        <nav className="navbar navbar-light bg-light mb-3">
+        <nav className="navbar navbar-light bg-warning mb-3">
           <div className="container">
             <Link to="/" style={{ textDecoration: "none" }}>
               <div className="navbar-brand mb-0 h1 d-flex flex-row align-items-center">
@@ -16,7 +16,7 @@ export const Navbar = () => {
             </Link>
             <div className="ml-auto">
               <div className="dropdown">
-                <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <button className="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   Favorites <span className="badge bg-danger">{store.carrito.length}</span>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -27,7 +27,7 @@ export const Navbar = () => {
                     store.carrito.length != 0 && store.carrito.map((item, index) =>(
                       <li key={index}>
                         <span className="dropdown-item">{item.name}{" "}
-                          <button type="button" className="btn btn-outline-dark border-0" onClick={() => {actions.removeFromCart(item)}}><i class="fa-solid fa-trash"></i></button>
+                          <button type="button" className="btn btn-outline-dark border-0" onClick={() => {actions.removeFromCart(item)}}><i className="fa-solid fa-trash"></i></button>
                         </span>
                       </li>
                       
