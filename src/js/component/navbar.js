@@ -4,7 +4,7 @@ import {Context} from "../store/appContext.js"
 
 export const Navbar = () => {
 
-  const {store} = useContext(Context)
+  const {store, actions} = useContext(Context)
     return (
         <nav className="navbar navbar-light bg-light mb-3">
           <div className="container">
@@ -17,7 +17,7 @@ export const Navbar = () => {
             <div className="ml-auto">
               <div className="dropdown">
                 <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Favorites <span className="badge bg-secondary">4</span>
+                  Favorites <span className="badge bg-danger">4</span>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   {
@@ -25,7 +25,11 @@ export const Navbar = () => {
                   }
                   {
                     store.carrito.length != 0 && store.carrito.map((item, index) =>(
-                      <li key={index}><span className="dropdown-item">{item.name}</span></li>
+                      <li key={index}>
+                        <span className="dropdown-item">{item.name}{" "}
+                          <button type="button" class="btn btn-outline-dark border-0" onClick={() => {actions.removeFromCart(item)}}><i class="fa-solid fa-trash"></i></button>
+                        </span>
+                      </li>
                       
                     )) 
                   }

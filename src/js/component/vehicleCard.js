@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
+import {Context} from "../store/appContext.js"
 
 export const VehicleCard = (props) => {
     const [vehicle, setVehicle] = useState([]);
     const navigate = useNavigate();
+    const {actions} = useContext(Context)
 
     useEffect(() => {
     async function loadVehicle(){
@@ -36,7 +38,7 @@ export const VehicleCard = (props) => {
             </p>
             <div className="d-flex flex-row justify-content-between" style={{ width: "100%" }}>
                 <button className="btn btn-primary" onClick={() => navigate(`/vehicle/${props.id}`)}>Learn More!</button>
-                <button type="button" className="btn btn-outline-warning">
+                <button type="button" className="btn btn-outline-warning" onClick={() => {actions.addToCart(props.item)}}>
                 <i className="fa-regular fa-heart"></i>
                 </button>
             </div>

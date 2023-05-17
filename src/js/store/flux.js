@@ -1,8 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
     return {
       store: {
-        characters: [],
-        planets: [],
         carrito: []
       },
       actions: {
@@ -35,6 +33,11 @@ const getState = ({ getStore, getActions, setStore }) => {
           if(!store.carrito.find(item => item.uid == newItem.uid)){
             setStore({ carrito: [newItem, ...store.carrito] })
           }
+        },
+
+        removeFromCart: targetItem => {
+          const store = getStore();
+          setStore({carrito: store.carrito.filter(item => item.uid != targetItem.uid)})
         }
         
 
