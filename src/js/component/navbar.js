@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import {Context} from "../store/appContext.js"
 
 export const Navbar = () => {
 
+  const {store} = useContext(Context)
     return (
         <nav className="navbar navbar-light bg-light mb-3">
           <div className="container">
@@ -18,9 +20,16 @@ export const Navbar = () => {
                   Favorites <span className="badge bg-secondary">4</span>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><span className="dropdown-item">Action</span></li>
-                  <li><span className="dropdown-item">Another action</span></li>
-                  <li><span className="dropdown-item">Something else here</span></li>
+                  {
+                    store.carrito.length == 0 && <li><span className="dropdown-item">Empty...</span></li>
+                  }
+                  {
+                    store.carrito.length != 0 && store.carrito.map((item, index) =>(
+                      <li key={index}><span className="dropdown-item">{item.name}</span></li>
+                      
+                    )) 
+                  }
+                  
                 </ul>
               </div>
             </div>

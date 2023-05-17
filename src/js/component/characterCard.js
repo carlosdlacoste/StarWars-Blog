@@ -7,7 +7,7 @@ import { Context } from "../store/appContext.js";
 export const CharacterCard = (props) => {
   const [character, setCharacter] = useState([]);
   const navigate = useNavigate();
-  const {store, actions} = useContext(Context)
+  const {actions} = useContext(Context)
 
   useEffect(() => {
     async function loadCharacter(){
@@ -41,7 +41,7 @@ export const CharacterCard = (props) => {
             </p>
             <div className="d-flex flex-row justify-content-between" style={{ width: "100%" }}>
               <button className="btn btn-primary" onClick={() => navigate(`/character/${props.id}`)}>Learn More!</button>
-              <button type="button" className="btn btn-outline-warning">
+              <button type="button" className="btn btn-outline-warning" onClick={() => actions.addToCart(props.item)}>
                 <i className="fa-regular fa-heart"></i>
               </button>
             </div>

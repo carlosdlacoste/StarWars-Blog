@@ -30,6 +30,12 @@ const getState = ({ getStore, getActions, setStore }) => {
         //   setStore({ demo: demo });
         // },
 
+        addToCart: newItem => {
+          const store = getStore();
+          if(!store.carrito.find(item => item.uid == newItem.uid)){
+            setStore({ carrito: [newItem, ...store.carrito] })
+          }
+        }
         
 
         // loadCharacters: async () => {
