@@ -24,8 +24,8 @@ export const PlanetCard = (props) => {
 
     return (
         
-        <div className="card" style={{ width: "18rem" }}>
-            <img src="https://scontent-bog1-1.xx.fbcdn.net/v/t1.6435-9/106589845_1443201212533239_5253541363214813502_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=973b4a&_nc_ohc=qEbU86zvaAAAX_u3hbe&_nc_ht=scontent-bog1-1.xx&oh=00_AfDvX7pLnu8BsJ4Ld3Y8A4SPqBpwE_hmsXc8bBHbjyaWFg&oe=6488C44E" className="card-img-top" alt="..." style={{ maxHeight: '200px', objectFit: 'cover' }}/>
+        <div className="card border border-warning" style={{ width: "18rem" }}>
+            <img src="https://www.lafinestradigital.com/wp-content/uploads/2011/09/starwars-planetes.jpg" className="card-img-top" alt="..." style={{ maxHeight: '200px', objectFit: 'cover' }}/>
             <div className="card-body d-flex flex-column align-items-start">
             <h5 className="card-title">{props.name}</h5>
             <p className="card-text text-start">
