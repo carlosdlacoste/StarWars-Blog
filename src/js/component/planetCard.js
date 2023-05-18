@@ -31,7 +31,7 @@ export const PlanetCard = (props) => {
             <p className="card-text text-start">
                 Population:{" "}{planet.population}
             </p>
-            <p className="card-text text-start">
+            <p className="card-text text-start text-truncate" style={{width: "16rem"}}>
                 Terrain:{" "}{planet.terrain}
             </p>
             <div className="d-flex flex-row justify-content-between" style={{ width: "100%" }}>

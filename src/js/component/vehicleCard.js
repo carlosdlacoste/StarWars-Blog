@@ -26,8 +26,8 @@ export const VehicleCard = (props) => {
         <div className="card" style={{ width: "18rem" }}>
             <img src="https://lumiere-a.akamaihd.net/v1/images/5ff895e40d603e0001462c74-image_ac3b4d2b.jpeg?region=0,0,1536,864&width=1200" className="card-img-top" alt="..." style={{ maxHeight: '200px', objectFit: 'cover' }}/>
             <div className="card-body d-flex flex-column align-items-start">
-            <h5 className="card-title">{props.name}</h5>
-            <p className="card-text text-start">
+            <h5 className="card-title text-truncate">{props.name}</h5>
+            <p className="card-text text-start text-truncate" style={{width: "16rem"}}>
                 Manufacturer:{" "}{vehicle.manufacturer}
             </p>
             <p className="card-text text-start">

@@ -57,11 +57,11 @@ export const Home = () => {
     
     <>
       <div className="container">
-        <h2>Characters</h2>
-        <div className="d-flex flex-wrap">
+        <h2 className="px-2 ms-1 text-danger">Characters</h2>
+        <div className="d-flex flex-wrap justify-content-around">
 
           {characters.map((character) => (
-              <div key={character.uid} className="m-2">
+              <div key={character.uid} className="my-3">
                 <CharacterCard
                   item={character}
                   name={character.name}
@@ -74,11 +74,11 @@ export const Home = () => {
 
           }  
         </div>
-        <h2>Planets</h2>
-        <div className="d-flex flex-wrap">
+        <h2 className="px-2 ms-1 pt-2 text-danger">Planets</h2>
+        <div className="d-flex flex-wrap justify-content-around">
 
           {planets.map((planet) => (
-              <div key={planet.uid} className="m-2">
+              <div key={planet.uid} className="my-3">
                 <PlanetCard
                   item={planet}
                   name={planet.name}
@@ -91,11 +91,11 @@ export const Home = () => {
 
           }  
         </div>
-        <h2>Vehicles</h2>
-        <div className="d-flex flex-wrap">
+        <h2 className="px-2 ms-1 pt-2 text-danger">Vehicles</h2>
+        <div className="d-flex flex-wrap justify-content-around">
 
           {vehicles.map((vehicle) => (
-              <div key={vehicle.uid} className="m-2">
+              <div key={vehicle.uid} className="my-3">
                 <VehicleCard
                   item={vehicle}
                   name={vehicle.name}
