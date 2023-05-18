@@ -74,6 +74,7 @@ export const Home = () => {
 
           }  
         </div>
+        <div className="border-top border-danger border-4 my-3"></div>
         <h2 className="px-2 ms-1 pt-2 text-danger">Planets</h2>
         <div className="d-flex flex-wrap justify-content-around">
 
@@ -91,6 +92,7 @@ export const Home = () => {
 
           }  
         </div>
+        <div className="border-top border-danger border-4 my-3"></div>
         <h2 className="px-2 ms-1 pt-2 text-danger">Vehicles</h2>
         <div className="d-flex flex-wrap justify-content-around">
 
